@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Webcam fun!</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+
+  <div class="photobooth">
+    <div class="controls">
+      <button onclick="startStreamCamera()">start camera</button>
+      <button onclick="stopCamera()">stop camera</button>
+      <button onclick="redFilter = true;rgbSpliteFilter=false;">Red effect</button>
+      <button onclick="redFilter = false;rgbSpliteFilter=true;">RGB splite effect</button>
+      <button onclick="redFilter = false;rgbSpliteFilter=false;">effects off</button>
+      <button onClick="takePhoto()">Take Photo</button>
+
+    </div>
+
+    <canvas class="photo"></canvas>
+    <video class="player"></video>
+    <div class="strip"></div>
+  </div>
+
+  <audio class="snap" src="./snap.mp3" hidden></audio>
+
+  <script src="scripts.js"></script>
+
+</body>
+
+</html>
