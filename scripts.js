@@ -1,6 +1,6 @@
 const video = document.querySelector('.player');
 const canvas = document.querySelector('.photo');
-const ctx = canvas.getContext('2d');
+const ctx = canvas.getContext('2d', { willReadFrequently: true });
 const strip = document.querySelector('.strip');
 const snap = document.querySelector('.snap');
 let redFilter = false;
@@ -51,7 +51,7 @@ function drawVideoInCanvas() {
     let pixels = ctx.getImageData(0, 0, width, height)
     if (redFilter) {
       pixels = redEffect(pixels);
-      ctx.putImageData(pixels,0,0);
+      ctx.putImageData(pixels, 0, 0);
     }
     if (rgbSpliteFilter) {
       pixels = rgbSplit(pixels);
